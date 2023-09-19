@@ -1,0 +1,134 @@
+plugins {
+    id 'com.android.application'
+    id 'org.jetbrains.kotlin.android'
+}
+
+android {
+    namespace 'com.anypli.roadtriip'
+    compileSdk 33
+
+    defaultConfig {
+        applicationId "com.anypli.roadtriip"
+        minSdk 24
+        targetSdk 33
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        vectorDrawables {
+            useSupportLibrary true
+        }
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+    buildFeatures {
+        compose true
+    }
+    composeOptions {
+        kotlinCompilerExtensionVersion '1.1.1'
+    }
+    packagingOptions {
+        resources {
+            excludes += '/META-INF/{AL2.0,LGPL2.1}'
+        }
+    }
+}
+
+dependencies {
+    def nav_version = "2.5.3"
+
+    implementation("androidx.navigation:navigation-compose:$nav_version")
+    implementation("androidx.navigation:navigation-fragment-ktx:$nav_version")
+    implementation("androidx.navigation:navigation-ui-ktx:$nav_version")
+    // Feature module Support
+    implementation("androidx.navigation:navigation-dynamic-features-fragment:$nav_version")
+    // Testing Navigation
+    androidTestImplementation("androidx.navigation:navigation-testing:$nav_version")
+    // Jetpack Compose Integration
+    implementation("androidx.navigation:navigation-compose:$nav_version")
+    implementation 'androidx.core:core-ktx:1.9.0'
+   // androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
+    implementation "androidx.compose.material:material:$compose_version"
+    implementation 'androidx.lifecycle:lifecycle-runtime-ktx:2.5.1'
+    implementation 'androidx.activity:activity-compose:1.6.1'
+    implementation "androidx.compose.ui:ui:$compose_version"
+    implementation "androidx.compose.ui:ui-tooling-preview:$compose_version"
+    implementation 'androidx.compose.material3:material3:1.0.0-beta03'
+    implementation 'com.google.firebase:firebase-firestore-ktx:24.5.0'
+    implementation 'androidx.navigation:navigation-runtime-ktx:2.5.3'
+    testImplementation 'junit:junit:4.13.2'
+    implementation 'androidx.compose.material:material-icons-core:1.2.0'
+    implementation 'androidx.compose.material:material-icons-extended:1.2.0'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.5'
+    //androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
+    androidTestImplementation "androidx.compose.ui:ui-test-junit4:$compose_version"
+    debugImplementation "androidx.compose.ui:ui-tooling:$compose_version"
+    debugImplementation "androidx.compose.ui:ui-test-manifest:$compose_version"
+    implementation 'com.squareup.retrofit2:retrofit:2.9.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.9.0'
+    implementation 'com.squareup.okhttp3:okhttp:4.9.1' // Utiliser la version d'OkHttp que vous souhaitez
+    implementation 'com.squareup.okhttp3:logging-interceptor:4.9.1' // Ajouter cette dépendance pour HttpLoggingInterceptor
+    implementation 'com.squareup.retrofit2:retrofit:2.9.0' // Utiliser la version de Retrofit que vous souhaitez
+    implementation 'com.squareup.okhttp3:logging-interceptor:4.9.1' // Ajouter le logging interceptor pour OkHttp
+    implementation("androidx.security:security-crypto:1.0.0")
+    implementation 'androidx.appcompat:appcompat:1.4.1'
+    implementation "androidx.compose.runtime:runtime:1.0.0"
+    //implementation "androidx.compose.runtime:runtime:1.0.0"
+    implementation "androidx.compose.ui:ui:1.0.5"
+    implementation "androidx.compose.material:material:1.0.5"
+    //implementation "androidx.compose.material:material:1.0.0"
+    implementation "androidx.compose.foundation:foundation-layout:1.0.4"
+
+
+
+    // For Identity Credential APIs
+    implementation("androidx.security:security-identity-credential:1.0.0-alpha03")
+
+    // For App Authentication APIs
+    implementation("androidx.security:security-app-authenticator:1.0.0-alpha02")
+
+    // For App Authentication API testing
+    androidTestImplementation("androidx.security:security-app-authenticator:1.0.0-alpha01")
+    //implementation "com.github.bumptech.glide:glide:<latest_version>"
+    //kapt "com.github.bumptech.glide:compiler:<latest_version>"
+   // implementation "com.github.bumptech.glide:compose:1.0.0-alpha.1"
+
+    //implementation 'com.github.bumptech.glide:glide:4.12.0'
+   // annotationProcessor 'com.github.bumptech.glide:compiler:4.12.0'
+
+    //implementation("io.coil-kt:coil:2.4.0")
+    //implementation("io.coil-kt:coil-compose:2.4.0")
+    implementation "com.github.bumptech.glide:compose:1.0.0-alpha.1"
+    implementation "androidx.activity:activity-compose:1.4.0"
+    implementation("io.coil-kt:coil-compose:2.0.0")
+    implementation "com.squareup.retrofit2:retrofit:2.9.0" // Remplacez x.x par la dernière version
+
+    implementation("androidx.datastore:datastore-preferences:1.0.0")
+
+
+    //implementation project(":osm-compose")
+    implementation 'org.osmdroid:osmdroid-android:6.1.16'
+    implementation 'androidx.interpolator:interpolator:1.0.0'
+
+
+// Maps
+    implementation 'com.google.maps.android:maps-compose:2.7.2'
+    implementation 'com.google.android.gms:play-services-maps:18.1.0'
+
+
+
+
+
+}

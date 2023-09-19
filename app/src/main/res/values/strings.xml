@@ -1,0 +1,98 @@
+<resources>
+    <string name="app_name">Roadtriip</string>
+    <string name="global_ok">OK</string>
+    <string name="sign_in">Sign In</string>
+    <string name="create_an_account">Create An Account</string>
+    <string name="create_an_event">Create An Event </string>
+    <string name="home">Home</string>
+    <string name="profile">Profile</string>
+    <string name="myevents">MyEvents</string>
+    <string name="cars">Cars</string>
+    <string name="login">Login</string>
+    <string name="titre">Titre</string>
+    <string name="prix">Prix</string>
+    <string name="reset_password">Reset Password</string>
+    <string name="phone">Phone</string>
+    <string name="ajouter">Ajouter</string>
+<!--    <string name="google_maps_key">google_maps_key</string>-->
+    <string name="annuler">Annuler</string>
+    <string name="empty">Veuillez Remplir Tous Les Champs</string>
+    <string name="submit">Submit</string>
+    <string name="image">image</string>
+    <string name="name">Name</string>
+    <string name="Fname"> First Name</string>
+    <string name="Lname">LastName</string>
+    <string name="last_name">Last Name</string>
+    <string name="events">Events</string>
+    <string name="global_network_error">Veuillez Verifier Votre Connexion</string>
+    <string name="user_deleted_success">Suppression avec Succès </string>
+    <string name="user_updated_success">User Modifier avec Succès </string>
+    <string name="password_updated_success">Password Modifier avec Succès </string>
+    <string name="global_server_error">Une Erreur est Survenue</string>
+    <string name="sign_up">Sign Up?</string>
+    <string name="name_or_email_address"> Name or Email Address</string>
+    <string name="email_address"> Email Address</string>
+    <string name="enter_password">Enter Password</string>
+    <string name="confirm_password">Confirm Password</string>
+    <string name="show_password">"Show password"</string>
+    <string name="hide_password">"Hide password"</string>
+    <string name="compte_profil">Compte et profil</string>
+    <string name="close">Close</string>
+    <string name="price">Price</string>
+    <string name="suivant">Suivant</string>
+    <string name="camera_icon">Camera Icon</string>
+    <string name="date">Date</string>
+    <string name="event_name">Event Name </string>
+    <string name="description">Description </string>
+    <string name="participer">Participer </string>
+    <string name="enter_registered_email">"Enter Registered Email"</string>
+    <string name="nombres_des_places_disponibles">"Nombres Des Places Disponibles"</string>
+    <string name="global_cancel">Cancel</string>
+    <string name="destination">Destination</string>
+    <string name="invalid_date_error">Invalid Date Error</string>
+    <string name="date_placeholder">dd/MM/yyyy</string>
+    <string name="changer_mdp">Changer le mot de passe</string>
+    <string name="ancien_mdp">Ancien mot de passe</string>
+    <string name="new_mdp">Nouveau mot de passe</string>
+    <string name="confirm_mdp">Confirmer le mot de passe</string>
+    <string name="camera">Camera</string>
+    <string name="fermer">Fermer</string>
+    <string name="empty_email">Empty Email</string>
+    <string name="empty_name">Empty Name</string>
+    <string name="empty_lastname">Empty Last Name</string>
+    <string name="empty_password">Empty Password</string>
+    <string name="invalid_email_format">Invalid Email Format</string>
+    <string name="invalid_date_format">Invalid Date Format</string>
+    <string name="changer">Changer</string>
+    <string name="aucune_photo_prise">Aucune photo prise</string>
+    <string name="voulez_vous_continuer_sans_ajouter_de_photo">Voulez-vous continuer sans ajouter de photo ?</string>
+    <string name="continuer">Continuer</string>
+    <string name="your_image">Your Image</string>
+    <string name="supprimer_compte">Supprimer Compte</string>
+    <string name="camera_dialog_title">Aucune Photo Prise</string>
+    <string name="camera_dialog_titleee">Avez Vous Une Voiture </string>
+    <string name="camera_dialog_message">Voulez Vous Continuer Sans Ajouter de Photo</string>
+    <string name="nom_prénom">Nom Prénom</string>
+    <string name="changer_le_mot_de_passe">CHANGER LE  MOT DE PASSE</string>
+    <string name="maj">Mettre à jour</string>
+    <string name="oui">Oui</string>
+    <string name="non">Non</string>
+    <string name="map">Location</string>
+    <string name="logout">Logout</string>
+    <string name="carname">Car Name</string>
+    <string name="userId">User ID</string>
+
+    <string name="color">Color</string>
+    <string name="pass_not_match">Mot De Passe Incorrecte</string>
+    <string name="invalid_phone_format">Invalid Phone Format</string>
+
+
+
+
+
+
+</resources>
+
+
+
+
