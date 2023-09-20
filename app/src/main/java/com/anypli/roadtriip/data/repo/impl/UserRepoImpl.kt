@@ -8,8 +8,8 @@ import com.anypli.roadtriip.data.model.UpdateResponse
 import com.anypli.roadtriip.data.model.User
 import com.anypli.roadtriip.data.model.UserBody
 import com.anypli.roadtriip.data.repo.abs.UserRepo
+import com.anypli.roadtriip.ui.home.HomeScreen
 import com.google.gson.Gson
-
 class UserRepoImpl() : BaseRepository(), UserRepo {
 
     private val gson = Gson()
@@ -30,13 +30,11 @@ class UserRepoImpl() : BaseRepository(), UserRepo {
     ): LogResponse {
         val LogUserBody = LogUserBody(email, password)
         return api.login(LogUserBody)
-       // preferences.clearPreferences()
     }
     override suspend fun saveUser(user: User) {
         preferences.saveUser(user)
     }
     override suspend fun getUser(): User? {
-
         return preferences.getUser()
     }
     override suspend fun deleteUser(
@@ -45,18 +43,16 @@ class UserRepoImpl() : BaseRepository(), UserRepo {
         api.deleteUser(userId)
         preferences.clearPreferences()
     }
-
     override suspend fun updateUser(userId: String , userBody: UserBody): UpdateResponse {
         return api.updateUser(userId, userBody)
     }
     override suspend fun forgetPassword () {
     }
-    override suspend fun updatePassword(
+    override suspend fun updatePassword (
         userId: String ,
         updatePasswordBody: PasswordUpdateBody
     ): UpdateResponse {
         return api.updatePassword(userId ,updatePasswordBody)
 
     }
-
 }

@@ -50,6 +50,10 @@ fun AddEventsScreen(
         navigationCallback = {
             if (it is Navigation.CameraScreen)
                 navigator.navigateTo(Navigation.CameraScreen)
+            else{
+                (it is Navigation.HomeScreen)
+                navigator.navigateTo(Navigation.HomeScreen)
+            }
         } ,
         snackbarHostState = snackbarHostState
     ) { modifier ->
@@ -258,8 +262,8 @@ private fun AddEventsScreen(
             Button(
                 onClick = {
                     //onCameraScreenClicked()
-                    //onAjouterClicked()
-                    onNextClicked ()
+                    onAjouterClicked()
+                   // onNextClicked ()
                 },
                 colors = ButtonDefaults.buttonColors(RoadtriipTheme.colors.yeloows),
                 modifier = Modifier

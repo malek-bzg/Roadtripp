@@ -53,7 +53,6 @@ fun <T : BaseViewModel> BaseScreen(
 
 
         }
-
     }
 }
 @Composable

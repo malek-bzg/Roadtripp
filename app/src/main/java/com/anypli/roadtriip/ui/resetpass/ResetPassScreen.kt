@@ -62,21 +62,15 @@ fun ResetPassScreen(
             onEmailChange = {
                 viewModel.onEmailChange(it)
             },
-
             onSignupClicked ={
                 viewModel.onSignupClicked()
             },
             onResetClicked ={
                 viewModel.onResetClicked()
             },
-
-
-
         )
     }
 }
-
-
 @Composable
 private fun ResetPassScreen(
     snackbarHostState : SnackbarHostState = remember { SnackbarHostState() } ,
@@ -98,13 +92,10 @@ private fun ResetPassScreen(
         Image(painter = painterResource(id = R.drawable.ic_shape), contentDescription = "",
             modifier = Modifier.fillMaxSize(),contentScale = ContentScale.FillBounds
         )
-
         Box(
             modifier = Modifier
-
                 .align(Alignment.BottomCenter),
         ) {
-
             Image(
                 painter = painterResource(id = R.drawable.logo2),
                 contentDescription = null,
@@ -112,7 +103,6 @@ private fun ResetPassScreen(
                 modifier = Modifier
                     .height(dimensionResource(R.dimen.dimen_global_300))
                     .fillMaxWidth(),
-
                 )
             Column(
                 modifier = Modifier
@@ -120,13 +110,10 @@ private fun ResetPassScreen(
                     .fillMaxWidth()
                     .verticalScroll(rememberScrollState())
                 ,
-
                 horizontalAlignment = Alignment.CenterHorizontally
             ) {
-
                 //.........................Spacer
                 Spacer(modifier = Modifier.height(dimensionResource(R.dimen.margin_global_50dp)))
-
                 //.........................Text: title
                 androidx.compose.material3.Text(
                     text = stringResource(R.string.reset_password),
@@ -153,14 +140,11 @@ private fun ResetPassScreen(
                     roundedCornerShape = RoadtriipTheme.shapes.radiusShape30dp,
                     onClick = {
                         onResetClicked()
-
                     }
-
                 )
                 Spacer(modifier = Modifier.padding(dimensionResource(R.dimen.margin_global_10dp)))
                 androidx.compose.material3.TextButton(onClick = {
                     onSignupClicked()
-
                 }) {
                     androidx.compose.material3.Text(
                         text = stringResource(R.string.sign_up),
@@ -168,17 +152,12 @@ private fun ResetPassScreen(
                         style = RoadtriipTheme.typography.fontSize14spBLack
                     )
                 }
-
                 Spacer(modifier = Modifier.padding(dimensionResource(R.dimen.margin_global_5dp)))
             }
         }
     }
-
 }
-
 //...........................................................................
-
-
 //email id
 @OptIn(ExperimentalComposeUiApi::class , ExperimentalMaterial3Api::class)
 @Composable
@@ -198,7 +177,6 @@ fun ResetEmailID(email: String, onEmailChange: (String) -> Unit ,errorMail: Int?
         errorMessage = errorMail?.let {
             stringResource(id = it)
         },
-
     )
 }
 @Preview
@@ -211,6 +189,5 @@ fun ResetPassScreenPreview() {
         onResetClicked = {}  ,
         onEmailChange = {} ,
         errorMail = R.string.empty,
-
     )
 }

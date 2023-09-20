@@ -1,6 +1,7 @@
 package com.anypli.roadtriip.data.preferences.impl
 
 import android.content.Context
+import android.content.Intent
 import androidx.security.crypto.EncryptedSharedPreferences
 import androidx.security.crypto.MasterKeys
 import com.anypli.roadtriip.data.model.User
@@ -27,6 +28,11 @@ class PreferencesImpl( context: Context) : Preferences {
     }
     override fun clearPreferences() {
         sharedPreferences.edit().clear().apply()
+    }
+    override fun clearActivityStack(context: Context , destinationActivity: Class<*>) {
+        val intent = Intent(context, destinationActivity)
+        intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
+        context.startActivity(intent)
     }
     override fun getUser(): User? {
         val userJsonString = sharedPreferences.getString("user_data", null)

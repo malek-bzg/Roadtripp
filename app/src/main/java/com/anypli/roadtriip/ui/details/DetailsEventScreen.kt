@@ -121,7 +121,7 @@ private fun DetailsEventsScreen (
                     model = "http://192.168.30.1:8009${gridViewItems[shared.currentItems].Image}" ,
                     contentDescription = null ,
                     contentScale = ContentScale.Crop ,
-                    modifier = Modifier.height(dimensionResource(R.dimen.dimen_global_200))
+                    modifier = Modifier.height(dimensionResource(R.dimen.dimen_global_250))
                 )
             }
             Text(

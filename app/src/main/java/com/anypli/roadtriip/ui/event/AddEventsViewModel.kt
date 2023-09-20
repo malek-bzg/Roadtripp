@@ -103,15 +103,26 @@ class AddEventsViewModel : BaseViewModel() {
                     }
                     hideBlockProgressBar()
                     //showSimpleDialog(message = TypeMessage.StringMessage("succes"))
-                    navigate(Navigation.CameraScreen)
+                    //navigate(Navigation.CameraScreen)
+                    handleGlobalUpEvent(null)
 
                 } catch (e: Exception) {
                     hideBlockProgressBar()
-                    handleGlobalError(e)
+                    handleGlobalUpEvent(e)
                 }
 
             }
 
+        }
+    }
+    private fun handleGlobalUpEvent(exception:  java.lang.Exception?){
+        if (exception == null){
+            showSimpleDialog(message = TypeMessage.ResourceMessage(R.string.event_creer_avec_succes), okActionBlock = {
+                navigate(Navigation.HomeScreen)
+            })
+
+        }else{
+            showSimpleDialog(message = TypeMessage.ResourceMessage(R.string.global_server_error))
         }
     }
     private fun clearErrorMessages() {

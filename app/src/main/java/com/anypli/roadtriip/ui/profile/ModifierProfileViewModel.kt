@@ -23,9 +23,7 @@ class ModifierProfileViewModel : BaseViewModel() {
 
 
     private val userRepository = RepositoriesUtility.getUserRepository()
-
     private val gson = Gson()
-
 
     var userData = MutableStateFlow<User?>(null)
 
@@ -140,30 +138,6 @@ class ModifierProfileViewModel : BaseViewModel() {
             }
         }
     }
-    fun onDeleteCliked () {
-        clearErrorMessages()
-        viewModelScope.launch {
-            showBlockProgressBar()
-            try {
-                val user = userRepository.getUser()
-                if(user!=null){
-                    val userId = user.id
-                    withContext(Dispatchers.IO){
-                        if (userId!=null){
-                            userRepository.deleteUser(userId)
-                        }
-                    }
-                    Log.d("DeleteUser","Delete user result : succes")
-                    hideBlockProgressBar()
-                    handleGlobalSup(null)
-                }
-            }catch(e: Exception){
-                hideBlockProgressBar()
-                handleGlobalSup(e)
-            }
-        }
-    }
-
     private fun handleGlobalSup(exception:  java.lang.Exception?){
         if (exception == null){
             showSimpleDialog(message = TypeMessage.ResourceMessage(R.string.user_deleted_success), okActionBlock = {
@@ -173,9 +147,6 @@ class ModifierProfileViewModel : BaseViewModel() {
         }else{
             showSimpleDialog(message = TypeMessage.ResourceMessage(R.string.global_server_error))
         }
-
-
-
     }
     private fun handleGlobalUp(exception:  java.lang.Exception?){
         if (exception == null){
@@ -186,10 +157,9 @@ class ModifierProfileViewModel : BaseViewModel() {
         }else{
             showSimpleDialog(message = TypeMessage.ResourceMessage(R.string.global_server_error))
         }
-
-
-
     }
+
+
     private fun clearErrorMessages() {
         _errorMail.value = null
         _errorname.value = null

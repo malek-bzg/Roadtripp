@@ -15,7 +15,10 @@ sealed class Navigation(val route: String) {
     object ChangermdpScreen : Navigation("changermdpScreen")
     object CarsScreen : Navigation("CarsScreen")
     object MapScreen : Navigation("MapScreen")
+    object MyEventsScreen : Navigation("MyEventsScreen")
+    object MyEventsDetailsScreen : Navigation("MyEventsDetailsScreen")
     object Back : Navigation("back")
+
 
 
 

@@ -52,7 +52,7 @@ import com.anypli.roadtriip.ui.shared.theme.radiusShape30dp
 fun ModifierProfileScreen(
 
     viewModel: ModifierProfileViewModel ,
-    navigator: AppNavigator,
+    navigator: AppNavigator ,
 
 
 ) {
@@ -115,7 +115,7 @@ fun ModifierProfileScreen(
     @Composable
     private fun ModifierProfileScreen(
         userData: User? ,
-        snackbarHostState: SnackbarHostState = remember { SnackbarHostState() } ,
+        snackbarHostState: SnackbarHostState = remember {SnackbarHostState()} ,
         modifier: Modifier ,
         name: String ,
         lastname : String ,
@@ -149,7 +149,7 @@ fun ModifierProfileScreen(
                     .padding(dimensionResource(R.dimen.margin_global_20dp)) ,
                 verticalArrangement = Arrangement.SpaceBetween ,
                 horizontalAlignment = Alignment.CenterHorizontally
-            ) {
+            ){
                 TopAppBar(
                     title = {
                         Text(

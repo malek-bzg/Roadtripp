@@ -16,8 +16,10 @@ import com.anypli.roadtriip.global.helper.Navigation
 import com.anypli.roadtriip.map.MapScreen
 import com.anypli.roadtriip.ui.cars.CarsScreen
 import com.anypli.roadtriip.ui.details.DetailsEventsScreen
+import com.anypli.roadtriip.ui.details.MyEventsDetailsScreen
 import com.anypli.roadtriip.ui.event.AddEventsScreen
 import com.anypli.roadtriip.ui.event.CameraScreen
+import com.anypli.roadtriip.ui.event.MyEventsScreen
 import com.anypli.roadtriip.ui.home.HomeScreen
 import com.anypli.roadtriip.ui.profile.ModifierProfileScreen
 import com.anypli.roadtriip.ui.profile.ProfileScreen
@@ -28,7 +30,6 @@ fun AppNavHost(navHostController: NavHostController = rememberNavController()) {
 
      val navigator : AppNavigator = remember (navHostController){AppNavigatorImpl(navHostController)}
     //val drawerState = rememberDrawerState(initialValue = DrawerValue.Closed)
-
     NavHost(navHostController , startDestination = Navigation.SigninScreen.route, modifier = Modifier) {
 
         composable(route = Navigation.SplashScreen.route){
@@ -69,6 +70,12 @@ fun AppNavHost(navHostController: NavHostController = rememberNavController()) {
         }
         composable(route = Navigation.MapScreen.route){
             MapScreen()
+        }
+        composable(route = Navigation.MyEventsScreen.route){
+            MyEventsScreen(viewModel(),navigator)
+        }
+        composable(route = Navigation.MyEventsDetailsScreen.route){
+            MyEventsDetailsScreen(viewModel(),navigator)
         }
     }
 }

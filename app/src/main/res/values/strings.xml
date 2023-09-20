@@ -24,8 +24,10 @@
     <string name="Lname">LastName</string>
     <string name="last_name">Last Name</string>
     <string name="events">Events</string>
+    <string name="my_events">My Events</string>
     <string name="global_network_error">Veuillez Verifier Votre Connexion</string>
     <string name="user_deleted_success">Suppression avec Succès </string>
+    <string name="event_creer_avec_succes">creation Event avec Succès </string>
     <string name="user_updated_success">User Modifier avec Succès </string>
     <string name="password_updated_success">Password Modifier avec Succès </string>
     <string name="global_server_error">Une Erreur est Survenue</string>
